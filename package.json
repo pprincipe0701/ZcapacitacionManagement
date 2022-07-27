@@ -1,0 +1,63 @@
+{
+    "name": "zcapacitacion-management",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "https://github.com/SAP-samples/sap-learning-extension-suite",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^5",
+        "@sap/cds-dk": "^6.0.2",
+        "@sap/hana-client": "^2.13.21",
+        "@sap/hdi-deploy": "^4.4.1",
+        "@sap/xsenv": "^3.3.2",
+        "@sap/xssec": "^3.2.13",
+        "circular-json": "^0.5.9",
+        "express": "^4",
+        "passport": "^0.6.0"
+    },
+    "devDependencies": {
+        "sqlite3": "^5.0.2"
+    },
+    "scripts": {
+        "start": "cds run"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "sql"
+            },
+            "xsuaa": {
+                "kind": "xsuaa"
+            }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
+        }
+    }
+}
