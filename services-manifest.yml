@@ -1,0 +1,16 @@
+# Generated services-manifest.yml based on template version 0.1.0
+# appName = zcapacitacion-management
+---
+create-services:
+# ------------------------------------------------------------
+  - name:   zcapacitacion-management-db
+    broker: hana  # 'hanatrial' on trial landscapes
+    plan: "hdi-shared"
+# ------------------------------------------------------------
+  - name:   zcapacitacion-management-xsuaa
+    broker: xsuaa
+    plan: "application"
+# ------------------------------------------------------------
+  - name: zcapacitacion-management-destination-service
+    broker: destination
+    plan: "lite"
